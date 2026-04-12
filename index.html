@@ -3,66 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pi Block - Pi-hole Client</title>
+  <title>Pi Block – Pi-hole Client</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header>
-  <h1>Pi Block</h1>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">π Block</div>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="#features">Features</a>
+    <a href="#screens">Screens</a>
+    <a href="#open">Open Source</a>
     <a href="about.html">About</a>
     <a href="privacy.html">Privacy</a>
-    <a href="https://github.com/aaryanvangari/pi-block" target="_blank">GitHub</a>
+    <a href="https://github.com/aaryanvangari/pi-block" target="_blank" class="btn">GitHub</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h2>Modern Pi-hole Client</h2>
-  <p>Monitor and control your Pi-hole server from Android and iOS.</p>
+  <div class="hero-content">
+    <h1>Control Your Pi-hole<br/>Anywhere</h1>
+    <p>
+      A modern, privacy-first client for managing your Pi-hole server.
+      Built with Flutter. Open-source. No tracking.
+    </p>
+
+    <div class="cta">
+      <a href="#" class="primary">Coming Soon</a>
+      <a href="https://github.com/aaryanvangari/pi-block" target="_blank" class="secondary">View Source</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/dashboard-dark.png" alt="App Preview"/>
+  </div>
 </section>
 
-<section class="features">
-  <h3>Features</h3>
-  <ul>
-    <li>Real-time dashboard</li>
-    <li>Query logs and filtering</li>
-    <li>Blocking controls</li>
-    <li>Detailed analytics</li>
-    <li>Dark & Light mode</li>
-  </ul>
+<!-- FEATURES -->
+<section id="features" class="features">
+  <h2>Features</h2>
+
+  <div class="grid">
+    <div class="card fade-up">
+      <h3>Real-time Dashboard</h3>
+      <p>Monitor queries, blocked domains, and activity instantly.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Query Logs</h3>
+      <p>Inspect DNS queries with detailed filtering and status.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Blocking Control</h3>
+      <p>Enable or disable blocking with a single tap.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Analytics</h3>
+      <p>Visualize traffic, clients, and upstream performance.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Dark & Light Mode</h3>
+      <p>Seamless UI that adapts to your preference.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Cross Platform</h3>
+      <p>Android, iOS today. Web, Linux, Windows coming soon.</p>
+    </div>
+  </div>
 </section>
 
-<section class="screenshots">
-  <h3>Screenshots</h3>
+<!-- SCREENSHOTS -->
+<section id="screens" class="screens">
+  <h2>App Preview</h2>
 
-  <img src="assets/dashboard-dark.png" alt="Dashboard Dark"/>
-  <img src="assets/dashboard-light.png" alt="Dashboard Light"/>
-  <img src="assets/query-log.png" alt="Query Log"/>
-  <img src="assets/metrics.png" alt="Metrics"/>
-  <img src="assets/graphs.png" alt="Graphs"/>
+  <div class="screens-grid">
+    <img src="assets/dashboard-dark.png" class="fade-up"/>
+    <img src="assets/dashboard-light.png" class="fade-up"/>
+    <img src="assets/query-log.png" class="fade-up"/>
+    <img src="assets/metrics.png" class="fade-up"/>
+    <img src="assets/graphs.png" class="fade-up"/>
+  </div>
 </section>
 
-<section class="open-source">
-  <h3>Open Source</h3>
+<!-- OPEN SOURCE -->
+<section id="open" class="open">
+  <h2>Open Source & Privacy First</h2>
+
   <p>
-    Pi Block is fully open-source. You can inspect the code, contribute,
-    or host your own builds.
+    Pi Block is fully open-source and designed with privacy at its core.
+    No analytics. No tracking. No data collection.
+  </p>
+
+  <p>
+    All data stays within your network and comes directly from your Pi-hole instance.
   </p>
 </section>
 
+<!-- DONATION -->
 <section class="donation">
-  <h3>Support Development</h3>
+  <h2>Support Development</h2>
   <p>
-    If you find this project useful, consider supporting development.
-    Contributions help improve features and maintain the project.
+    If you find this project useful, you can support its development.
+    Contributions help improve the app and maintain long-term sustainability.
   </p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Pi Block</p>
+  <p>© 2026 Pi Block • Open Source</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
