@@ -27,57 +27,6 @@ body {
   color: var(--text);
 } */
 
-/* MOBILE MENU */
-@media (max-width: 900px) {
-  .hamburger {
-    display: flex !important;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #141821;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 12px;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex !important;
-  }
-
-  .nav-links.active a {
-    color: #fff;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .faq {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .screens-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .faq-content {
-    width: 350px;
-  }
-}
 
 * {
   margin: 0;
@@ -174,12 +123,15 @@ body {
   margin-left: 5px;
 }
 
+.section-item {
+    padding: 80px 120px;
+}
+
 /* HERO */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 40px;
 }
 
 .hero-content {
@@ -221,7 +173,6 @@ body {
 
 /* FEATURES */
 .features {
-  padding: 80px 40px;
   text-align: center;
 }
 
@@ -266,7 +217,6 @@ body {
 
 /* SCREENSHOTS */
 .screens {
-  padding: 80px 40px;
   text-align: center;
 }
 
@@ -301,19 +251,16 @@ body {
 
 /* OPEN */
 .open {
-  padding: 80px 40px;
   text-align: center;
 }
 
 /* DONATION */
 .donation {
-  padding: 80px 40px;
   text-align: center;
 }
 
 /* NOT AFFILIATED */
 .not-affiliated {
-  padding: 80px 40px;
   text-align: center;
 }
 
@@ -322,7 +269,6 @@ body {
     display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 40px;
   }
 
 .faq-title {
@@ -438,4 +384,57 @@ input:checked + .slider::before {
 .fa-solid, .fas {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
+}
+
+
+/* MOBILE MENU */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex !important;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #141821;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links.active a {
+    color: #fff;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .faq {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .screens-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .section-item {
+    padding: 80px 40px;
+  }
 }
