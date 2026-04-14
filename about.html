@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Pi-Block</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-<header>
-  <h1>About</h1>
-</header>
-
-<section>
-  <p>
-    This project is developed as part of a broader initiative to build
-    open, privacy-focused tools.
-  </p>
-
-  <p>
-    The goal is to create software that is transparent, community-driven,
-    and free from tracking or intrusive monetization.
-  </p>
-
-  <p>
-    Pi Block is designed to simplify interaction with Pi-hole while maintaining
-    full control in the hands of the user.
-  </p>
-
-  <p>
-    Learn more:
-    <a href="https://blog.opensquares.in/about-me/" target="_blank">
-      About the developer
-    </a>
-  </p>
-
-  <p>
-    GitHub:
-    <a href="https://github.com/aaryanvangari/pi-block" target="_blank">
-      Project Repository
-    </a>
-  </p>
-
-</section>
-
+<body class="bg-white dark:bg-slate-950 dark:text-white transition-colors duration-300">
+    <nav class="p-6"><a href="index.html" class="text-primary font-bold">← Back to Home</a></nav>
+    <main class="max-w-3xl mx-auto px-6 py-20">
+        <h1 class="text-4xl font-bold mb-8">About the Developer</h1>
+        <div class="prose dark:prose-invert">
+            <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                I'm Aaryan Vangari, the creator of Pi-Block. I'm a developer passionate about open-source software, privacy and self hosting ecosystem.
+            </p>
+            <p class="mb-4">
+                Pi-Block was born out of a personal need for a lightweight, modern way to manage Pi-hole instances without relying on a desktop browser. 
+                My focus is on creating tools that respect user privacy and provide a seamless experience for self-hosted services.
+            </p>
+            <p>
+                When I'm not building mobile apps, I blog at OpenSquares about tech, security, and my journey as a developer.
+            </p>
+            <div class="mt-10 flex gap-4">
+                <a href="https://blog.opensquares.in" class="text-primary underline">Visit Blog</a>
+                <a href="https://github.com/aaryanvangari" class="text-primary underline">GitHub Profile</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

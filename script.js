@@ -10,46 +10,28 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
-// Detect platform
-const ua = navigator.userAgent || navigator.vendor;
+// // Detect platform
+// const ua = navigator.userAgent || navigator.vendor;
 
-if (/android/i.test(ua)) {
-  document.getElementById("appStoreBtn").style.display = "none";
-}
-if (/iPhone|iPad|iPod/i.test(ua)) {
-  document.getElementById("playStoreBtn").style.display = "none";
-}
+// if (/android/i.test(ua)) {
+//   document.getElementById("appStoreBtn").style.display = "none";
+// }
+// if (/iPhone|iPad|iPod/i.test(ua)) {
+//   document.getElementById("playStoreBtn").style.display = "none";
+// }
 
-// Stars counter
-fetch("https://api.github.com/repos/aaryanvangari/pi-block")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("stars").innerText = data.stargazers_count || 0;
-  })
-  .catch(() => {
-    document.getElementById("stars").innerText = "100+";
-  });
+// // Stars counter
+// fetch("https://api.github.com/repos/aaryanvangari/pi-block")
+//   .then(res => res.json())
+//   .then(data => {
+//     document.getElementById("stars").innerText = data.stargazers_count || 0;
+//   })
+//   .catch(() => {
+//     document.getElementById("stars").innerText = "100+";
+//   });
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  // Light/Dark mode toggle
-  const toggle = document.getElementById("themeToggle");
-
-  if (!toggle) return; // safety
-
-  // Load saved theme
-  if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light");
-    toggle.checked = true;
-  }
-
-  toggle.addEventListener("change", () => {
-    document.body.classList.toggle("light");
-
-    const isLight = document.body.classList.contains("light");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
-  });
     
   // Mobile menu toggle
   const hamburger = document.getElementById("hamburger");
@@ -89,3 +71,41 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+
+
+
+const themeToggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement;
+
+// Theme Switcher Logic
+themeToggle.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update Icon
+    themeToggle.innerHTML = newTheme === 'dark' 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
+});
+
+ const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+    });
+
+// Mobile Menu Toggle
+// mobileBtn.addEventListener('click', () => {
+//     navMenu.classList.toggle('active');
+// });
+
+// Load Saved Theme
+window.onload = () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', savedTheme);
+    if(savedTheme === 'dark') themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+};

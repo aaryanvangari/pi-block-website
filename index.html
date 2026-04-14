@@ -6,6 +6,7 @@
   <title>Pi Block - Pi-Hole Client</title>
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!-- SEO -->
   <meta name="description" content="Pi Block is a modern, open-source Pi-Hole client for Android and iOS. Monitor DNS queries, control blocking, and view analytics securely.">
@@ -16,12 +17,19 @@
   <meta property="og:description" content="Privacy-first Pi-Hole mobile client">
   <meta property="og:image" content="assets/dashboard-dark.png">
   <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#ef4444' } } }
+        }
+    </script>
+  
 </head>
-<body>
-
-<!-- NAVBAR -->
+<!-- <body> -->
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-white transition-colors duration-300">
+    
 <header class="navbar">
-  <!-- <div class="logo">π Block</div> -->
   <div class="logo">
   <span class="pi">π</span>
   <span class="block">Block</span>
@@ -29,28 +37,21 @@
 
   <div class="nav-right">
     <nav class="nav-links" id="navLinks">
-      <a href="#features">Features</a>
-      <a href="#screens">Screens</a>
-      <a href="#open">Open Source</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="https://github.com/aaryanvangari/pi-block" target="_blank" class="">GitHub</a>
+      <a href="#features" class="hover:text-primary transition">Features</a>
+      <a href="#screens" class="hover:text-primary transition">Screens</a>
+      <a href="#open" class="hover:text-primary transition">Open Source</a>
+      <a href="#faq" class="hover:text-primary transition">Faq</a>
+      <a href="about.html" class="hover:text-primary transition">About</a>
+      <a href="privacy.html" class="hover:text-primary transition">Privacy</a>
+      <a href="https://github.com/aaryanvangari/pi-block" target="_blank" class="hover:text-primary transition"><i class="fab fa-github text-xl"></i></a>
     </nav>
+    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800"><i class="fas fa-moon dark:fa-sun"></i></button>
 
-    <div class="theme-switch">
-      <span class="icon">☀️</span>
-      <label class="switch">
-        <input type="checkbox" id="themeToggle">
-        <span class="slider"></span>
-      </label>
-      <span class="icon">🌙</span>
-    </div>
 
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="space-y-1 hamburger" id="hamburger">
+        <span class="bg-gray-600 dark:bg-white"></span>
+        <span class="bg-gray-600 dark:bg-white"></span>
+        <span class="bg-gray-600 dark:bg-white"></span>
     </div>
   </div>
 </header>
@@ -58,24 +59,30 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Control Your Pi-Hole<br/>Anywhere</h1>
-    <p>
-      A modern, privacy-first client for managing your Pi-Hole server.
-      Built with Flutter. Open-source. No tracking.
-    </p>
-
-    <div class="cta">
-      <div class="store-buttons">
-        <a id="playStoreBtn" href="#" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-        </a>
-
-        <a id="appStoreBtn" href="#" target="_blank">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
-        </a>
-      </div>
+    <h2 class="text-5xl font-bold mb-16">Control Your Pi-Hole<br/>Anywhere</h2>
+    <div class="mb-10">
+        <p class="text-xl text-slate-600 mb-5 dark:text-slate-400">
+        A modern, open-source, privacy first mobile client for Pi-hole.
+        </p>
+        <p class="text-xl text-slate-600 mb-5 dark:text-slate-400">Monitor stats, manage logs, and toggle your DNS blocking with a single tap. </p>
+        <p class="text-xl text-slate-600 mb-5 dark:text-slate-400">Built with Flutter. Open-source. No tracking.</p>
     </div>
     
+
+    <div class="flex flex-col sm:flex-row flex-start gap-4 mb-10">
+        <a href="#" class="flex items-center justify-center bg-black text-white px-8 py-3 rounded-xl border border-slate-700 hover:scale-105 transition">
+            <i class="fab fa-apple text-3xl mr-3"></i>
+            <div class="text-left"><p class="text-xs">Download on the</p><p class="text-lg font-semibold leading-none">App Store</p></div>
+        </a>
+        <a href="#" class="flex items-center justify-center bg-black text-white px-8 py-3 rounded-xl border border-slate-700 hover:scale-105 transition">
+            <i class="fab fa-google-play text-2xl mr-3"></i>
+            <div class="text-left"><p class="text-xs">Get it on</p><p class="text-lg font-semibold leading-none">Google Play</p></div>
+        </a>
+        <a href="https://github.com/aaryanvangari/pi-block/releases" target="_blank" class="flex items-center justify-center bg-black text-white px-8 py-3 rounded-xl border border-slate-700 hover:scale-105 transition">
+            <i class="fab fa-github text-2xl mr-3"></i>
+            <div class="text-left"><p class="text-xs">Source packages</p><p class="text-lg font-semibold leading-none">GitHub</p></div>
+        </a>
+    </div>
   </div>
 
   <div class="hero-image">
@@ -85,44 +92,70 @@
 
 <!-- FEATURES -->
 <section id="features" class="features">
-  <h1>Features</h1>
+  <!-- <h1>Features</h1> -->
+  <h2 class="text-3xl font-bold mb-4">Features</h2>
 
   <div class="grid">
-    <div class="card fade-up">
-      <h3>Real-time Dashboard</h3>
-      <p>Monitor queries, blocked domains, and activity instantly.</p>
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fas fa-chart-line text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Real-time Dashboard</h3>
+      <p class="text-slate-600 dark:text-slate-400">Monitor queries, percentage blocked, domains blocked and unique domains in real-time from your dashboard.</p>
     </div>
 
-    <div class="card fade-up">
-      <h3>Query Logs</h3>
-      <p>Inspect DNS queries with detailed filtering and status.</p>
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fas fa-power-off text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Quick Toggle</h3>
+      <p class="text-slate-600 dark:text-slate-400">Enable or disable Pi-hole blocking instantly with customizable timers (5m, 10m, or custom).</p>
     </div>
 
-    <div class="card fade-up">
-      <h3>Blocking Control</h3>
-      <p>Enable or disable blocking with a single tap.</p>
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+        <i class="fas fa-server text-primary text-3xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Client Management</h3>
+        <p class="text-slate-600 dark:text-slate-400">View and manage all your clients with detailed stats and controls.</p>
     </div>
 
-    <div class="card fade-up">
-      <h3>Analytics</h3>
-      <p>Visualize traffic, clients, and upstream performance.</p>
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fas fa-list-ul text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Query Logs</h3>
+      <p class="text-slate-600 dark:text-slate-400">View detailed history of all DNS requests and block/whitelist domains on the fly.</p>
     </div>
 
-    <div class="card fade-up">
-      <h3>Dark & Light Mode</h3>
-      <p>Seamless UI that adapts to your preference.</p>
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fas fa-chart-area text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Analytics</h3>
+      <p class="text-slate-600 dark:text-slate-400">Visualize traffic, clients, and upstream performance.</p>
     </div>
 
-    <div class="card fade-up">
-      <h3>Cross Platform</h3>
-      <p>Android, iOS today. Web, Linux, Windows coming soon.</p>
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fas fa-circle-half-stroke text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Dark & Light Mode</h3>
+      <p class="text-slate-600 dark:text-slate-400">Seamless UI that adapts to your preference.</p>
+    </div>
+
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fa-regular fa-bell text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Notifications</h3>
+      <p class="text-slate-600 dark:text-slate-400">Get Pi-Hole diagnostic messages as notifications.</p>
+    </div>
+
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fa-solid fa-bars-staggered text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Logs</h3>
+      <p class="text-slate-600 dark:text-slate-400">View Pi-Hole logs from various sources like FTL, DNSMasq and HTTP web server.</p>
+    </div>
+
+    <div class="card fade-up p-8 bg-gray-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+      <i class="fa-brands fa-apple text-primary text-3xl mb-4"></i>
+      <i class="fa-brands fa-google-play text-primary text-3xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Cross Platform</h3>
+      <p class="text-slate-600 dark:text-slate-400">Android, iOS today. Web, Linux, Windows planned.</p>
     </div>
   </div>
 </section>
 
 <!-- SCREENSHOTS -->
 <section id="screens" class="screens">
-  <h1>App Preview</h1>
+  <h2 class="text-3xl font-bold mb-4">Screenshots</h2>
 
   <div class="screens-grid">
     <img src="assets/dashboard-dark.png" class="fade-up delay-1"/>
@@ -135,14 +168,16 @@
 
 <!-- OPEN SOURCE -->
 <section id="open" class="open">
-  <h1>Open Source & Privacy First</h1>
+  <h2 class="text-3xl font-bold mb-4">Open Source & Privacy First</h2>
 
-  <p>
+  <p class="text-slate-600 dark:text-slate-400">
     Pi Block is fully open-source and designed with privacy at its core.
-    No analytics. No tracking. No data collection.
   </p>
+  <p class="text-slate-600 dark:text-slate-400">No analytics.</p>
+  <p class="text-slate-600 dark:text-slate-400">No tracking.</p>
+  <p class="text-slate-600 dark:text-slate-400">No data collection.</p>
 
-  <p>
+  <p class="text-slate-600 dark:text-slate-400">
     All data stays within your network and comes directly from your Pi-Hole instance.
   </p>
 
@@ -153,19 +188,60 @@
 
 <!-- DONATION -->
 <section class="donation">
-  <h1>Support Development</h1>
-  <p>
+  <h2 class="text-3xl font-bold mb-4">Support Development</h2>
+  <p class="text-slate-600 dark:text-slate-400">
     If you find this project useful, you can support its development.
     Contributions help improve the app and maintain long-term sustainability.
   </p>
 </section>
 
+<section class="not-affiliated">
+  <h2 class="text-3xl font-bold mb-4">No affiliation with Pi-Hole</h2>
+  <p class="text-slate-600 dark:text-slate-400">
+    Pi Block is an independent open-source project created by developers who wanted better control over their networks. It is not officially affiliated with or endorsed by the Pi-hole project. Pi Block works as a client for Pi-hole servers and respects all the principles that make Pi-hole valuable, but it is a separate application built and maintained independently. We are grateful for the Pi-hole community and the foundation it provides for network-level ad blocking and DNS management.
+  </p>
+</section>
+
+<section id="faq" class="faq">
+    <div class="faq-title">
+        <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-content">
+        <div class="faq-item">
+            <h3 class="font-bold">What is Pi Block?</h3>
+            <p class="text-slate-600 dark:text-slate-400">Pi Block is a mobile client for Pi-hole, built with Flutter. It lets you monitor and control your Pi-hole DNS sinkhole from your phone or tablet, giving you real-time visibility into your network's DNS queries and the ability to manage blocking rules on the go.</p>
+            <div class="faq-border"></div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="font-bold">Does Pi Block collect data?</h3>
+            <p class="text-slate-600 dark:text-slate-400">No. Pi Block has no tracking, no analytics, and no data collection. All communication happens between your device and your own Pi-hole instance. Nothing is sent to external servers or stored anywhere except on your network.</p>
+            <div class="faq-border"></div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="font-bold">Which platforms are supported?</h3>
+            <p class="text-slate-600 dark:text-slate-400">Pi Block currently supports Android and iOS. Web, Linux, and Windows versions are planned for future releases. You can follow development progress on GitHub.</p>
+            <div class="faq-border"></div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="font-bold">Is Pi Block free?</h3>
+            <p class="text-slate-600 dark:text-slate-400">Yes, Pi Block is completely free. It is open-source software with no ads, no paywalls, and no forced monetization. Donations are optional and help support ongoing development.</p>
+            <div class="faq-border"></div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="font-bold">How do I contribute?</h3>
+            <p class="text-slate-600 dark:text-slate-400">Pi Block is open-source and welcomes contributions. Visit the GitHub repository to report issues, suggest features, or submit code. You can also support the project by donating or sharing it with others.</p>
+            <div class="faq-border"></div>
+        </div>
+    </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
-  <p>
-    This app is not affiliated with the Pi-Hole project.
-  </p>
-  <p>© 2026 Pi Block • Open Source</p>
+  <p class="text-slate-600 dark:text-slate-400">© 2026 Pi Block by Aaryan Vangari</p>
 </footer>
 
 <script src="script.js"></script>
