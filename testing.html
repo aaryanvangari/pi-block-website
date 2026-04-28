@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closed Testing - Pi-Block</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-slate-950 dark:text-white transition-colors duration-300">
+
+  <nav class="p-6">
+    <a href="index.html" class="text-primary font-bold">← Back to Home</a>
+  </nav>
+
+  <main class="max-w-3xl mx-auto px-6 py-20">
+    <h1 class="text-4xl font-bold mb-8">Google Play Store Closed Testing</h1>
+
+    <div class="prose dark:prose-invert space-y-6 text-slate-600 dark:text-slate-400">
+
+      <h2 class="text-3xl font-bold">Links</h2>
+      <ul>
+        <li>
+          Google Play:
+          <a href="https://play.google.com/store/apps/details?id=com.aaryanvangari.piblock" class="text-primary underline">Open App</a>
+        </li>
+        <li>
+          Web:
+          <a href="https://play.google.com/apps/testing/com.aaryanvangari.piblock" class="text-primary underline">Join Testing</a>
+        </li>
+      </ul>
+
+      <h2 class="text-3xl font-bold">Procedure</h2>
+      
+      <h3 class="text-2xl font-bold">Web</h3>
+      <h4 class="text-1xl font-bold">Preferred method and working method for opting into closed testing</h4>
+      <ol class="list-decimal pl-6 space-y-2">
+        <li>Sign in using your email in Chrome. If using a different account, sign out first and sign in with the email which is added to the closed testing track.</li>
+        <li>Open the web link from above in Chrome.</li>
+        <li>The website will ask you to become a tester, accept it.</li>
+        <li>If step 3 doesn't appear, your email may not be added to the closed testing track. Please request for access.</li>
+        <li>Click the link similar to "download the Pi-Block app" from the web page.</li>
+        <li>Install the app (approximately 11 MB; takes 5-10 seconds).</li>
+        <li>You can use any Pi-Hole credentials, but below are provided for convenience.</li>
+        <li>
+        Use the following mock credentials:
+        
+        <div class="mt-3 space-y-2">
+            <span class="block text-sm font-semibold text-slate-500 dark:text-slate-400">Mock URL</span>
+            <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-lg">
+            
+            <a href="https://mock-pihole.opensquares.in" class="text-primary underline break-all">
+                https://mock-pihole.opensquares.in
+            </a>
+            </div>
+
+            <span class="block text-sm font-semibold text-slate-500 dark:text-slate-400">Mock API Token</span>
+            <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-lg">
+            
+            <code class="text-sm font-mono text-slate-900 dark:text-white">
+                test-token
+            </code>
+            </div>
+        </div>
+        </li>
+        <li>Log in to the app and explore all pages.</li>
+      </ol>
+
+      <h3 class="text-2xl font-bold">Google Play</h3>
+      <ol class="list-decimal pl-6 space-y-2">
+        <li>Sign in using your account in Google Play.</li>
+        <li>If it's not your email which is added to the closed testing track, log out from Google Play.</li>
+        <li>This may be inconvenient for daily usage.</li>
+        <li>Once logged in with the correct account, follow the Web procedure from step 2 using the Google Play link.</li>
+        <li>This method is not fully tested, so steps may vary.</li>
+      </ol>
+
+      <h3 class="text-2xl font-bold">Notes</h3>
+      <ol class="list-decimal pl-6 space-y-2">
+        <li>Since this uses mock data, not all functions and interactions with app will work.</li>
+        <li>On a real live Pi-Hole server, everything should function properly.</li>
+      </ol>
+
+    </div>
+  </main>
+
+</body>
+</html>
